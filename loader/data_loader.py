@@ -129,7 +129,7 @@ class CustomDataset(Dataset):
 
             fin = h5py.File(fpath, 'r')
             for vid in fin.keys():
-                feats = fin[vid].value
+                feats = fin[vid][:]
                 feats_len = len(feats)
 
                 # Sample fixed number of frames
