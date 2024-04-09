@@ -127,17 +127,17 @@ def extract_negative_samples(corpus, vid2captions):
 
 def main(dataset, split):
     if dataset == 'MSVD':
-        caption_fpath = "/content/data/{}/metadata/{}.csv".format(dataset, split)
+        caption_fpath = "/content/SGN/data/{}/metadata/{}.csv".format(dataset, split)
         vid2captions = load_MSVD_captions(caption_fpath)
     elif dataset == 'MSR-VTT':
-        caption_fpath = "/content/data/{}/metadata/{}.json".format(dataset, split)
+        caption_fpath = "/content/SGN/data/{}/metadata/{}.json".format(dataset, split)
         vid2captions = load_MSRVTT_captions(caption_fpath)
     else:
         raise NotImplementedError('Unknown dataset: {}'.format(dataset))
 
     negative_videos = extract_negative_samples(dataset, vid2captions)
 
-    with open("/content/data/{}/metadata/neg_vids_{}.json".format(dataset, split), 'w') as fout:
+    with open("/content/SGN/data/{}/metadata/neg_vids_{}.json".format(dataset, split), 'w') as fout:
         json.dump(negative_videos, fout)
 
 if __name__ == '__main__':
