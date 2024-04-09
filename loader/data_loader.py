@@ -38,11 +38,11 @@ class CustomVocab(object):
 
     def load_pretrained_embedding(self, name):
         if name == 'GloVe':
-            with open("data/Embeddings/GloVe/GloVe_300.json", 'r') as fin:
+            with open("/content/SGN/data/Embeddings/GloVe/GloVe_300.json", 'r') as fin:
                 w2v = json.load(fin)
         elif name == 'Word2Vec':
             w2v = gensim.models.KeyedVectors.load_word2vec_format(
-                'data/Embeddings/Word2Vec/GoogleNews-vectors-negative300.bin',
+                '/content/SGN/data/Embeddings/Word2Vec/GoogleNews-vectors-negative300.bin',
                 binary=True)
         else:
             raise NotImplementedError("Unknown pretrained word embedding: {}".format(w2v))

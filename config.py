@@ -4,32 +4,32 @@ import os
 class MSVDSplitConfig:
     model = "3DResNext101"
 
-    video_fpath = "data/MSVD/features/{}.hdf5".format(model)
-    caption_fpath = "data/MSVD/metadata/MSR Video Description Corpus.csv"
+    video_fpath = "/content/SGN/data/MSVD/features/{}.hdf5".format(model)
+    caption_fpath = "/content/SGN/data/MSVD/metadata/MSR Video Description Corpus.csv"
 
-    train_video_fpath = "data/MSVD/features/{}_train.hdf5".format(model)
-    val_video_fpath = "data/MSVD/features/{}_val.hdf5".format(model)
-    test_video_fpath = "data/MSVD/features/{}_test.hdf5".format(model)
+    train_video_fpath = "/content/SGN/data/MSVD/features/{}_train.hdf5".format(model)
+    val_video_fpath = "/content/SGN/data/MSVD/features/{}_val.hdf5".format(model)
+    test_video_fpath = "/content/SGN/data/MSVD/features/{}_test.hdf5".format(model)
 
-    train_metadata_fpath = "data/MSVD/metadata/train.csv"
-    val_metadata_fpath = "data/MSVD/metadata/val.csv"
-    test_metadata_fpath = "data/MSVD/metadata/test.csv"
+    train_metadata_fpath = "/content/SGN/data/MSVD/metadata/train.csv"
+    val_metadata_fpath = "/content/SGN/data/MSVD/metadata/val.csv"
+    test_metadata_fpath = "/content/SGN/data/MSVD/metadata/test.csv"
 
 
 class MSRVTTSplitConfig:
     model = "3DResNext101"
 
-    video_fpath = "data/MSR-VTT/features/{}.hdf5".format(model)
-    train_val_caption_fpath = "data/MSR-VTT/metadata/train_val_videodatainfo.json"
-    test_caption_fpath = "data/MSR-VTT/metadata/test_videodatainfo.json"
+    video_fpath = "/content/SGN/data/MSR-VTT/features/{}.hdf5".format(model)
+    train_val_caption_fpath = "/content/SGN/data/MSR-VTT/metadata/train_val_videodatainfo.json"
+    test_caption_fpath = "/content/SGN/data/MSR-VTT/metadata/test_videodatainfo.json"
 
-    train_video_fpath = "data/MSR-VTT/features/{}_train.hdf5".format(model)
-    val_video_fpath = "data/MSR-VTT/features/{}_val.hdf5".format(model)
-    test_video_fpath = "data/MSR-VTT/features/{}_test.hdf5".format(model)
+    train_video_fpath = "/content/SGN/data/MSR-VTT/features/{}_train.hdf5".format(model)
+    val_video_fpath = "/content/SGN/data/MSR-VTT/features/{}_val.hdf5".format(model)
+    test_video_fpath = "/content/SGN/data/MSR-VTT/features/{}_test.hdf5".format(model)
 
-    train_metadata_fpath = "data/MSR-VTT/metadata/train.json"
-    val_metadata_fpath = "data/MSR-VTT/metadata/val.json"
-    test_metadata_fpath = "data/MSR-VTT/metadata/test.json"
+    train_metadata_fpath = "/content/SGN/data/MSR-VTT/metadata/train.json"
+    val_metadata_fpath = "/content/SGN/data/MSR-VTT/metadata/val.json"
+    test_metadata_fpath = "/content/SGN/data/MSR-VTT/metadata/test.json"
 
 
 class VocabConfig:
@@ -39,33 +39,33 @@ class VocabConfig:
 
 
 class MSVDLoaderConfig:
-    train_caption_fpath = "data/MSVD/metadata/train.csv"
-    val_caption_fpath = "data/MSVD/metadata/val.csv"
-    test_caption_fpath = "data/MSVD/metadata/test.csv"
+    train_caption_fpath = "/content/SGN/data/MSVD/metadata/train.csv"
+    val_caption_fpath = "/content/SGN/data/MSVD/metadata/val.csv"
+    test_caption_fpath = "/content/SGN/data/MSVD/metadata/test.csv"
     min_count = 1
     max_caption_len = 15
 
-    total_video_feat_fpath_tpl = "data/{}/features/{}.hdf5"
-    split_video_feat_fpath_tpl = "data/{}/features/{}_{}.hdf5"
+    total_video_feat_fpath_tpl = "/content/SGN/data/{}/features/{}.hdf5"
+    split_video_feat_fpath_tpl = "/content/SGN/data/{}/features/{}_{}.hdf5"
     frame_sample_len = 30
 
-    split_negative_vids_fpath = "data/MSVD/metadata/neg_vids_{}.json"
+    split_negative_vids_fpath = "/content/SGN/data/MSVD/metadata/neg_vids_{}.json"
 
     num_workers = 1
 
 
 class MSRVTTLoaderConfig:
-    train_caption_fpath = "data/MSR-VTT/metadata/train.json"
-    val_caption_fpath = "data/MSR-VTT/metadata/val.json"
-    test_caption_fpath = "data/MSR-VTT/metadata/test.json"
+    train_caption_fpath = "/content/SGN/data/MSR-VTT/metadata/train.json"
+    val_caption_fpath = "/content/SGN/data/MSR-VTT/metadata/val.json"
+    test_caption_fpath = "/content/SGN/data/MSR-VTT/metadata/test.json"
     min_count = 3
     max_caption_len = 15
 
-    total_video_feat_fpath_tpl = "data/{}/features/{}.hdf5"
-    split_video_feat_fpath_tpl = "data/{}/features/{}_{}.hdf5"
+    total_video_feat_fpath_tpl = "/content/SGN/data/{}/features/{}.hdf5"
+    split_video_feat_fpath_tpl = "/content/SGN/data/{}/features/{}_{}.hdf5"
     frame_sample_len = 30
 
-    split_negative_vids_fpath = "data/MSR-VTT/metadata/neg_vids_{}.json"
+    split_negative_vids_fpath = "/content/SGN/data/MSR-VTT/metadata/neg_vids_{}.json"
 
     num_workers = 2
 
